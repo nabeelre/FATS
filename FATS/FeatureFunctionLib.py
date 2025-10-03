@@ -154,7 +154,7 @@ class SlottedA_length(Base):
                     slots[i] = k
                     i = i + 1
                 else:
-                    prod[k] = np.infty
+                    prod[k] = np.inf
         else:
             for k in np.arange(K1, K):
                 idx = np.where(ks == k)
@@ -163,7 +163,7 @@ class SlottedA_length(Base):
                     slots[i - 1] = k
                     i = i + 1
                 else:
-                    prod[k] = np.infty
+                    prod[k] = np.inf
             np.trim_zeros(prod, trim='b')
 
         slots = np.trim_zeros(slots, trim='b')
@@ -910,7 +910,7 @@ class CAR_sigma(Base):
 
         b = np.mean(x) / tau
         epsilon = 1e-300
-        cte_neg = -np.infty
+        cte_neg = -np.inf
         num_datos = np.size(x)
 
         Omega = []
